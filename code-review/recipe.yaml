@@ -27,7 +27,7 @@ parameters:
   default: claude-3-sonnet
   description: llm model to use
 - key: temperature
-  input_type: number
+  input_type: string
   requirement: optional
   default: 0.7
   description: temperature to use
