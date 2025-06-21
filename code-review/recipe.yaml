@@ -14,7 +14,7 @@ activities:
 settings:                     
   goose_provider: "{{goose_provider}}" 
   goose_model: "{{goose_model}}"           
-  temperature: "{{temperature}}" 
+  temperature: {{temperature}}
 parameters:
 - key: goose_provider
   input_type: string
@@ -27,7 +27,7 @@ parameters:
   default: claude-3-sonnet
   description: llm model to use
 - key: temperature
-  input_type: string
+  input_type: number
   requirement: optional
   default: 0.7
   description: temperature to use
