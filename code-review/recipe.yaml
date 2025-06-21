@@ -14,7 +14,7 @@ activities:
 settings:                     
   goose_provider: "{{goose_provider}}" 
   goose_model: "{{goose_model}}"           
-  temperature: {{temperature}}    #unable to set as parameter, got map error using number
+  temperature: 0.7   #unable to set as parameter, got map error using number and it can not be string either
 parameters:
 - key: goose_provider
   input_type: string
@@ -26,11 +26,6 @@ parameters:
   requirement: optional
   default: claude-3-sonnet
   description: llm model to use
-- key: temperature
-  input_type: number
-  requirement: optional
-  default: 0.7 # default is required for optional parameters
-  description: temperature setting higher is more creative
 - key: project_name
   input_type: string
   requirement: required # could be required, optional or user_prompt
