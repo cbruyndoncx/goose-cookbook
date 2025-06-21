@@ -12,10 +12,25 @@ activities:
 - "Check test coverage against {{ test_coverage }}% requirement"
 - "Verify {{ style_guide }} compliance"
 settings:                     
-  goose_provider: "anthropic"   
-  goose_model: "claude-3-sonnet"          
-  temperature: 0.7 
+  goose_provider: "{{goose_provider}}" 
+  goose_model: "{{goose_model}}"           
+  temperature: "{{temperature}}" 
 parameters:
+- key: goose_provider
+  input_type: string
+  requirement: optional
+  default: anthropic
+  description: llm provider to use
+- key: goose_model
+  input_type: string
+  requirement: optional
+  default: claude-3-sonnet
+  description: llm model to use
+- key: temperature
+  input_type: string
+  requirement: optional
+  default: 0.7
+  description: temperature to use
 - key: project_name
   input_type: string
   requirement: required # could be required, optional or user_prompt
