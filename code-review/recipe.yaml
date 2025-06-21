@@ -14,7 +14,7 @@ activities:
 settings:                     
   goose_provider: "{{goose_provider}}" 
   goose_model: "{{goose_model}}"           
-  temperature: {{temperature}}
+  temperature: "{{temperature}}"
 parameters:
 - key: goose_provider
   input_type: string
